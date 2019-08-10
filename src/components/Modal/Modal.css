@@ -1,0 +1,21 @@
+.modal {
+  background-color: white;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  z-index: 200;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+  width: 50%;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal--closed {
+  display: none;
+}
