@@ -6,7 +6,8 @@ import List from './components/List/List';
 
 class App extends Component {
   state = {
-    isModalShown: false
+    isModalShown: false,
+    isBoxShown: false
   }
 
   showModalHandler = () => {
@@ -21,18 +22,20 @@ class App extends Component {
     return (
       <div className='app'>
         <h1>React Animations</h1>
-
-        <Modal 
-          show={this.state.isModalShown}
-          closeModalHandler={this.closeModalHandler}
-        />
-        <Backdrop 
-          show={this.state.isModalShown}
-        />
+        <button className='button'>{this.state.isBoxShown ? 'Hide' : 'Show'} Box</button>
+        <div></div>
         <button
           className='button'
           onClick={this.showModalHandler}
         >Open Modal</button>
+        
+        <Modal
+          show={this.state.isModalShown}
+          closeModalHandler={this.closeModalHandler}
+        />
+        <Backdrop
+          show={this.state.isModalShown}
+        />
 
         <h3>Animating Lists</h3>
         <List />

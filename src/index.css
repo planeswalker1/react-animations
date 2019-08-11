@@ -23,6 +23,8 @@ body {
 
 .button {
   border: 1px solid red;
+  display: block;
+  margin: 15px auto;
   font: inherit;
   padding: 8px;
   background-color: red;
