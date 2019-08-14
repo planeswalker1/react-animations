@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import './List.css';
 
 class List extends Component {
@@ -25,19 +26,23 @@ class List extends Component {
 
   render() {
     const listItems = this.state.items.map((item, index) => (
-      <li
+      <CSSTransition
         key={index}
-        className='list-item'
-        onClick={() => this.removeItemHandler(index)}>{item}</li>
+        classNames="fade"
+        timeout={400}>
+        <li
+          className='list-item'
+          onClick={() => this.removeItemHandler(index)}>{item}</li>
+      </CSSTransition>
     ));
 
     return (
       <div>
         <button className='button' onClick={this.addItemHandler}>Add Item</button>
         <p>Click Item Number to Remove.</p>
-        <ul className='list'>
+        <TransitionGroup component="ul" className='list'>
           {listItems}
-        </ul>
+        </TransitionGroup>
       </div>
     );
   }

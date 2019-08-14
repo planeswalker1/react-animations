@@ -36,3 +36,16 @@ body {
 .button:active {
   background-color: darkred;
 }
+
+.box {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  transition: opacity 1s ease-out;
+  opacity: 1;
+}
+
+.box--animate {
+  opacity: 0;
+}
