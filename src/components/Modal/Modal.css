@@ -18,10 +18,10 @@
   animation: openModal .4s ease-out both;
 }
 
-.modal--closed {
+.modal--close {
   /* opacity: 0; */
   /* transform: translateY(-100vh); */
-  animation: closeModal .4s ease-out both;
+  animation: closeModal 1s ease-out both;
 }
 
 @keyframes openModal {
